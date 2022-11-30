@@ -1,4 +1,5 @@
 <?php
+include_once 'classConexion.php';
 class Comentario{
     private $id;
     private $idRuta;
@@ -50,15 +51,7 @@ class Comentario{
     public function setConexion($conexion){
         $this->conexion = $conexion;
     }
-    public function insertarComentario(){
-        $resul = $this->conexion->prepare("INSERT INTO comentarios (idRuta, nombre, comentario, fecha) VALUES (?, ?, ?, ?)");
-        $resul->execute(array($this->idRuta, $this->nombre, $this->comentario, $this->fecha));
-    }
-    public function buscarComentariosPorIdRuta(){
-        $resul = $this->conexion->prepare("SELECT * FROM comentarios WHERE idRuta = ?");
-        $resul->execute(array($this->idRuta));
-        return $resul;
-    }
+
 }
 
 ?>

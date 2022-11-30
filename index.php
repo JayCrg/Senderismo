@@ -30,12 +30,12 @@
             <TABLE border='0' width='600'>
                <TR>
                   <TD valign=top align=CENTER colspan=2>
-                     <FORM name='form1' METHOD='POST' ACTION="index.php?operacion=buscar">
+                      <FORM name='form1' METHOD='POST' ACTION=""> <!--index.php?operacion=buscar-->
                         <FONT size='-1'>Buscar por el campo <SELECT NAME='campo_busqueda'>
                               <OPTION Value=titulo> T&iacute;tulo </OPTION>
                               <OPTION Value=descripcion> Descripci&oacute;n </OPTION>
                            </SELECT>
-                           <P><INPUT TYPE='TEXT' NAME='lo_q_busco' value='' size='20'> <INPUT TYPE='SUBMIT'
+                           <P><INPUT TYPE='TEXT' NAME='lo_q_busco' size='20'> <INPUT TYPE='SUBMIT'
                                  NAME='boton_buscar' VALUE='&iexcl;Buscar!'>
                         </FONT>
                      </FORM>
@@ -71,6 +71,45 @@
                      <FONT color='white'>Operaciones</FONT>
                   </TH>
                </TR>
+
+
+
+               <?php
+               include_once 'classRuta.php';
+               include_once 'classConexion.php';
+               // $ruta = new Ruta();
+               $conexion = new Conexion();
+
+               echo 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+              if (isset($_POST['lo_q_busco'])) {
+                  if($_POST['campo_busqueda'] == 'titulo') {
+                     // $ar = $conexion->buscarPorNombre($_POST['lo_q_busco']);
+                     // print_r($ar);
+                  } else {
+                     $ar = $conexion->buscarPorDescripcion($_POST['lo_q_busco']);
+                     print_r($ar);
+                  }
+
+
+
+
+
+              } else {
+                 $operacion = "listado";}
+
+               ?>
+
+
+
+
+
+
+
+
+
+
+
+
                <TR>
                   <TD>
                      <FONT size='-1'><B>Willirex mi padre</B></FONT>
