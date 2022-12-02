@@ -361,6 +361,7 @@ class ControladorInterfaz
    /*INSERTAR RUTA*/
    }
    public function insertEntradaRuta($data){
+      print_r($data);
       $titulo = $data['titulo'];
       $descripcion = $data['descripcion'];
       $desnivel = $data['desnivel'];

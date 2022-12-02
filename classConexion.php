@@ -56,7 +56,7 @@
         // INSERTAR
         public function insertarRuta($nombre, $descripcion, $desnivel, $distancia, $notas, $dificultad)
         {
-            $resul = $this->prepare("INSERT INTO rutas (nombre, descripcion, desnivel, distancia, notas) VALUES (?, ?, ?, ?, ?, ?)");
+            $resul = $this->prepare("INSERT INTO rutas (titulo, descripcion, desnivel, distancia, dificultad, notas) VALUES (?, ?, ?, ?, ?, ?)");
             $resul->execute(array($nombre, $descripcion, $desnivel, $distancia, $dificultad, $notas));
             return $resul->fetchAll();
         }
