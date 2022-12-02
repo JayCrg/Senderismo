@@ -1,0 +1,111 @@
+<html>
+
+<head>
+	<title>Actividad 1 - Unidad 7 - Curso Iniciación de PHP 5 - Rutas Senderismo</title>
+	<style type="text/css">
+		input {
+			font-family: Arial, Helvetica;
+			font-size: 14;
+			color: #000033;
+			font-weight: normal;
+			border-color: #999999;
+			border-width: 1;
+			background-color: #FFFFFF;
+		}
+	</style>
+
+</head>
+
+<body vlink="black" link="black" bgcolor="#C0C0C0" alink="black">
+	<center>
+
+		<table width="760" cellspacing="3" cellpadding="3" border="0" bgcolor="green" align="center">
+			<tbody>
+				<tr>
+					<td><img src="senderismo.gif" width="240" height="70"></td>
+					<th colspan="2" width="75%">&nbsp;
+						<font size="6" face="arial, helvetica" color="black"><u>Rutas senderismo</u></font>&nbsp;
+					</th>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+		</p>
+		<center>
+			<p>
+			<table width="600" border="0">
+				<tbody>
+					<tr>
+						<td colspan="2" valign="top" align="CENTER">
+							<form name="form1" method="POST" action=""><!-- index.php?operacion=buscar -->
+								<font size="-1">Buscar por el campo <select name="campo_busqueda">
+
+										<option value="titulo"> Título </option>
+										<option value="descripcion"> Descripción </option>
+									</select> </font>
+								<p>
+									<font size="-1"><input type="TEXT" name="lo_q_busco" value="" size="20"> <input
+											type="SUBMIT" name="boton_buscar" value="¡Buscar!">
+									</font>
+								</p>
+							</form>
+						</td>
+						<td align="center">
+							<form name="form2" method="POST"
+								action="index.php?operacion=introduce&amp;ver=0&amp;nume=0#ancla">
+								<input type="SUBMIT" name="alta" value="Nueva ruta">
+							</form>
+							<form name="form3" method="POST" action="index.php?operacion=listado">
+								<input type="SUBMIT" name="alta" value="Listado completo">
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</p>
+			<hr>
+
+
+	
+			<table width="800" cellspacing="1" cellpadding="1" border="0" align="center">
+				<tbody>
+					<tr>
+						<th bgcolor="green">
+							<font color="white">Nombre</font>
+						</th>
+						<th bgcolor="green">
+							<font color="white">Fecha</font>
+						</th>
+						<th bgcolor="green">
+							<font color="white">Comentario</font>
+						</th>
+					</tr>
+					<form name="form9" method="post" action="index.php?operacion=add_comentario"></form>
+					<tr>
+						<td><input type="text" name="nombre" size="20" maxlength="50"></td>
+						<td>
+							<font size="-1"><b>29/11/2022</b></font>
+						</td>
+						<td align="right"><input type="text" name="texto" size="75" maxlength="254">
+							<input type="hidden" name="id" value="125">
+							<input type="SUBMIT" name="pulsa" value="Añadir">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font size="-1"><b>asdad</b></font>
+						</td>
+						<td>
+							<font size="-1"><b>29/11/2022</b></font>
+						</td>
+						<td>
+							<font size="-1"><b>asdasd</b></font>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+	</center>
+</body>
+
+</html>

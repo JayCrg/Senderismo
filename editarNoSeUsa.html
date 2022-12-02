@@ -1,0 +1,131 @@
+<html>
+
+<head>
+	<title>Actividad 1 - Unidad 7 - Curso Iniciación de PHP 5 - Rutas Senderismo</title>
+	<style type="text/css">
+		input {
+			font-family: Arial, Helvetica;
+			font-size: 14;
+			color: #000033;
+			font-weight: normal;
+			border-color: #999999;
+			border-width: 1;
+			background-color: #FFFFFF;
+		}
+	</style>
+
+</head>
+
+<body vlink="black" link="black" bgcolor="#C0C0C0" alink="black">
+	<center>
+
+		<table width="760" cellspacing="3" cellpadding="3" border="0" bgcolor="green" align="center">
+			<tbody>
+				<tr>
+					<td><img src="senderismo.gif" width="240" height="70"></td>
+					<th colspan="2" width="75%">&nbsp;
+						<font size="6" face="arial, helvetica" color="black"><u>Rutas senderismo</u></font>&nbsp;
+					</th>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+
+
+		</p>
+		<center>
+			<p>
+			<table width="600" border="0">
+				<tbody>
+					<tr>
+						<td colspan="2" valign="top" align="CENTER">
+							<form name="form1" method="POST" action="index.php?operacion=buscar">
+								<font size="-1">Buscar por el campo <select name="campo_busqueda">
+										<option value="titulo"> Título </option>
+										<option value="descripcion"> Descripción </option>
+									</select> </font>
+								<p>
+									<font size="-1"><input type="TEXT" name="lo_q_busco" value="" size="20"> <input
+											type="SUBMIT" name="boton_buscar" value="¡Buscar!">
+									</font>
+								</p>
+							</form>
+						</td>
+						<td align="center">
+							<form name="form2" method="POST"
+								action="index.php?operacion=introduce&amp;ver=0&amp;nume=0#ancla">
+								<input type="SUBMIT" name="alta" value="Nueva ruta">
+							</form>
+							<form name="form3" method="POST" action="index.php?operacion=listado">
+								<input type="SUBMIT" name="alta" value="Listado completo">
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</p>
+			<p></p>
+			<hr><a name="ancla"></a>
+			<font color="green">
+				<h2><u>MODIFICAR RUTA</u></h2>
+			</font>
+			<form name="form9" method="post" action="index.php?operacion=exec_alta">
+				<table width="600" cellspacing="10" cellpadding="0" border="0" align="center">
+					<tbody>
+						<tr>
+							<td width="140" bgcolor="green" align="center">
+								<font color="white">Título</font>
+							</td>
+							<td><input type="text" name="titulo" size="55" value="<p style={color:red}>Hola</p>"
+									maxlength="55"></td>
+						</tr>
+						<tr>
+							<td width="140" bgcolor="green" align="center">
+								<font color="white">Descripción</font>
+							</td>
+							<td><input type="text" name="descripcion" size="120" value="dadsads" maxlength="254"></td>
+						</tr>
+						<tr>
+							<td width="140" bgcolor="green" align="center">
+								<font color="white">Desnivel (m)</font>
+							</td>
+							<td><input type="text" name="desnivel" size="7" value="1" maxlength="8"></td>
+						</tr>
+						<tr>
+							<td width="140" bgcolor="green" align="center">
+								<font color="white">Distancia (Km)</font>
+							</td>
+							<td><input type="text" name="distancia" size="7" value="1" maxlength="8"></td>
+						</tr>
+						<tr>
+							<td width="140" bgcolor="green" align="center">
+								<font color="white">Dificultad</font>
+							</td>
+							<td>
+								<select name="dificultad">
+									<option value="0"></option>
+									<option value="1">Baja</option>
+									<option value="2" selected="">Media</option>
+									<option value="3">Alta</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td width="140" bgcolor="green" align="center">
+								<font color="white">Notas</font>
+							</td>
+							<td><textarea rows="10" cols="50" name="notas">dsadsad</textarea></td>
+						</tr>
+					</tbody>
+				</table>
+				<center><input type="hidden" name="id" value="125"><input type="SUBMIT" name="pulsa"
+						value="Modificar ruta"></center>
+			</form>
+
+
+
+		</center>
+	</center>
+</body>
+
+</html>
